@@ -4,13 +4,24 @@ import {Link} from 'react-router-dom'
 class ListItem extends React.Component {
 
   render() {
+    let book_id = this.props.book.id;
+    let index = this.props.books.findIndex(book => {
+      return book.id === book_id
+    });
+    let shelf;
+    if(index > -1) {
+      shelf = this.props.books[index].shelf;
+    } else {
+      shelf = "none";
+    }
     return (
       <li>
         <div className='book'>
           <div className="book-top">
             <div className="book-shelf-changer">
-              <select defaultValue="select" onChange={e =>
-                this.props.updateSection(e.target.value, this.props.book.id)}>
+              <select value={shelf} onChange={e =>
+                this.props.updateSection(this.props.books[index] ||
+                  this.props.book, e.target.value)}>
                 <option value="select" disabled>Move to...</option>
                 <option value="currentlyReading">Currently Reading</option>
                 <option value="wantToRead">Want to Read</option>

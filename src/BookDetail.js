@@ -112,7 +112,8 @@ class BookDetail extends React.Component {
             <div className="book-description">
               <span className="title">Description:
               </span><br/>
-              <span className="value">{this.state.description || "Description Not Found!"}</span>
+              <span className="value">{this.state.description
+                || "Description Not Found!"}</span>
             </div>
         </div>
 
