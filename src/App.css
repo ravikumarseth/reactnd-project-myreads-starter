@@ -11,13 +11,6 @@ body, .app {
 }
 
 
-/* hides current select*/
-
-.hiddenOption {
-  display: none;
-}
-
-
 /* main page */
 
 .list-books-title, .book-details-title {

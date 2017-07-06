@@ -12,22 +12,10 @@ class ListItem extends React.Component {
               <select defaultValue="select" onChange={e =>
                 this.props.updateSection(e.target.value, this.props.book.id)}>
                 <option value="select" disabled>Move to...</option>
-                <option value="currentlyReading" className={
-                  this.props.book.shelf === 'currentlyReading'
-                  ? 'hiddenOption'
-                  : ''}>Currently Reading</option>
-                <option value="wantToRead" className={
-                  this.props.book.shelf === 'wantToRead'
-                  ? 'hiddenOption'
-                  : ''}>Want to Read</option>
-                <option value="read" className={
-                  this.props.book.shelf === 'read'
-                  ? 'hiddenOption'
-                  : ''}>Read</option>
-                <option value="none" className={
-                  this.props.book.shelf === 'none'
-                  ? 'hiddenOption'
-                  : ''}>None</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Read</option>
+                <option value="none">None</option>
               </select>
             </div>
 
