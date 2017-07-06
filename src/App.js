@@ -14,7 +14,6 @@ class BooksApp extends React.Component {
 
   componentDidMount() {
     BooksAPI.getAll().then(books => this.setState({books}))
-    BooksAPI.search("a", 20).then(searchedBooks => this.setState({searchedBooks}))
   }
 
   updateSection = (e, id) => {
