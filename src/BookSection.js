@@ -11,8 +11,8 @@ class BookSection extends React.Component {
           <ol className="books-grid">
             {this.props.books.map(book =>
               <ListItem key={book.id}
-                books={this.props.books}
                 book={book}
+                getShelf={this.props.getShelf}
                 updateSection={this.props.updateSection}/>)}
           </ol>
         </div>

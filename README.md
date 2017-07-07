@@ -9,8 +9,8 @@ In this application, the main page `/` displays a list of "shelves" (i.e. catego
  - Currently Reading
  - Want to Read
  - Read
- 
-Each book has a control that lets user select the shelf for that book. When user selects a different shelf, the book moves there. The control doesn't show the current shelf.
+
+Each book has a control that lets user select the shelf for that book. When user selects a different shelf, the book moves there. Clicking the control again shows the current shelf.
 The main page also has a link to `/search`, a search page that allows user to find books to add to your library.
 
 The search page has a text input that may be used to find books. As the value of the text input changes, the books that match that query are displayed on the page, along with a control that lets user add the book to your library. Search Page only shows books which are not in shelf.
@@ -20,9 +20,9 @@ The user can also click the book's name or author's name to find more informatio
 # Getting Started
 
 ## Pre-requisites
-    
+
  - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/en/)
-    
+
 ## Running the App
 
  - Clone the Repository and move to repository directory using command line.
