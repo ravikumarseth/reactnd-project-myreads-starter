@@ -124,6 +124,12 @@ ul {
     position: relative;
     margin-top: 20px;
   }
+  .book-details-title h1 {
+    font-size: 1.5em;
+  }
+  .book-details-title h2 {
+    font-size: 1em;
+  }
   .book-information {
     min-width: 100%;
     position: relative;
