@@ -29,7 +29,9 @@ class BooksApp extends React.Component {
 
   getShelf = (book) => {
     let book_id = book.id;
-    let index = this.state.books.findIndex(book => book.id === book_id);
+    let index = this.state.books.findIndex(book => {
+      return book.id === book_id
+    });
     let shelf;
     if (index > -1) {
       shelf = this.state.books[index].shelf;

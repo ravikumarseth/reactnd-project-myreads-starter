@@ -1,23 +1,24 @@
 import React from 'react'
 import ListItem from './ListItem'
 
-const BookSection = props => {
+class BookSection extends React.Component {
 
-  return (
-    <div className="bookshelf">
-      <h2 className="bookshelf-title">{props.heading}</h2>
-      <div className="bookshelf-books">
-        <ol className="books-grid">
-          {props.books.map(book => <ListItem key={book.id}
-                                          book={book}
-                                          getShelf={props.getShelf}
-                                          updateSection={props.updateSection}/>
-                                )
-          }
-        </ol>
+  render() {
+    return (
+      <div className="bookshelf">
+        <h2 className="bookshelf-title">{this.props.heading}</h2>
+        <div className="bookshelf-books">
+          <ol className="books-grid">
+            {this.props.books.map(book =>
+              <ListItem key={book.id}
+                book={book}
+                getShelf={this.props.getShelf}
+                updateSection={this.props.updateSection}/>)}
+          </ol>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default BookSection
